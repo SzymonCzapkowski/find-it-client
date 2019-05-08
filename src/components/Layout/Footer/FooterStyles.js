@@ -22,6 +22,9 @@ export const GithubLogo = styled.div`
     grid-gap: 10px;
     margin-right: 10px;
     justify-self: flex-end;
-    align-items: center;
-    
+    align-items: center;    
+
+     @media (max-width:500px) {
+        justify-self: center;
+    }
 `

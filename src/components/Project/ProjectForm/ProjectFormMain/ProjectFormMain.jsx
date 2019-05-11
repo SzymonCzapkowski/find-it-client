@@ -6,15 +6,13 @@ import { Button } from 'react-bootstrap';
 
 class ProjectFormMainClass extends React.Component {
 
-  addPlaceRef = ({openModal}) => {
-      console.log('lel');
-   this.openModal = openModal;
-}
+    state = {
+        isModalOpen: false,
+    }
 
-onAddPlaceClick = () => {
-          console.log('lel2')
-  this.openModal();
-}
+    closeModal = () => {
+        this.setState({isModalOpen: false})
+    }
 
 render() {
     return (
@@ -47,8 +45,11 @@ render() {
             </Field>
         </div>
        <div>
-            <AddPlaceClass ref={this.addPlaceRef} />
-            <Button onClick={this.onAddPlaceClick}>+</Button>
+       {this.state.isModalOpen ? 
+            <AddPlaceClass closeModal={this.closeModal}/> 
+            : null
+        }
+            <Button onClick={() => this.setState({isModalOpen: true})}>+</Button>
        </div>
             
         </form>   

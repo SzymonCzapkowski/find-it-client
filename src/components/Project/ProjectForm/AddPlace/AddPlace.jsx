@@ -7,35 +7,11 @@ import { Button } from 'react-bootstrap';
 Modal.setAppElement('#root')
 
 class AddPlaceClass extends React.Component {
-        constructor() {
-            super();
-
-            this.state = {
-                modalIsOpen: false
-            };
-
-            this.openModal = this.openModal.bind(this);
-            this.closeModal = this.closeModal.bind(this);
-        }
-
-        openModal() {
-            console.log("openmomdal");
-            this.setState({
-                modalIsOpen: true
-            });
-        }
-
-          closeModal() {
-            this.setState({
-                modalIsOpen: false
-            });
-        }
-
         render() {
     return (
       <div>
         <Modal
-          isOpen={this.state.modalIsOpen}
+          isOpen
           onRequestClose={this.closeModal}
           contentLabel= "Modal"
         >
@@ -55,9 +31,9 @@ class AddPlaceClass extends React.Component {
                 </div>
               </form>
           </div>
-          <Button onClick={this.closeModal}>Add Project</Button>
+          <Button onClick={this.props.closeModal}>Add Project</Button>
           
-          <Button onClick={this.closeModal}> x </Button>
+          <Button onClick={this.props.closeModal}> x </Button>
         </Modal>
       </div>
     );

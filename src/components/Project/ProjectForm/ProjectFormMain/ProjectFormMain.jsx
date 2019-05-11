@@ -2,6 +2,7 @@ import React from 'react';
 import { withFormik, Field } from 'formik';
 import AddPlaceClass from '../AddPlace/AddPlace';
 import { Button } from 'react-bootstrap';
+import Places from '../Places/Places';
 
 
 class ProjectFormMainClass extends React.Component {
@@ -51,7 +52,7 @@ render() {
         }
             <Button onClick={() => this.setState({isModalOpen: true})}>+</Button>
        </div>
-            
+            <Places/>
         </form>   
     );
 }

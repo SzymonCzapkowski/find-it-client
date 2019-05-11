@@ -1,16 +1,18 @@
 import React from 'react';
 import { withFormik, Field } from 'formik';
-import AddPlace from '../AddPlace/AddPlace';
+import AddPlaceClass from '../AddPlace/AddPlace';
 import { Button } from 'react-bootstrap';
 
 
 class ProjectFormMainClass extends React.Component {
 
   addPlaceRef = ({openModal}) => {
+      console.log('lel');
    this.openModal = openModal;
 }
 
 onAddPlaceClick = () => {
+          console.log('lel2')
   this.openModal();
 }
 
@@ -45,7 +47,7 @@ render() {
             </Field>
         </div>
        <div>
-            <AddPlace ref={this.addPlaceRef} />
+            <AddPlaceClass ref={this.addPlaceRef} />
             <Button onClick={this.onAddPlaceClick}>+</Button>
        </div>
             
@@ -73,4 +75,4 @@ export default withFormik({
         title: ''
     }),
 
-})(ProjectFormMain);
+})(ProjectFormMainClass);

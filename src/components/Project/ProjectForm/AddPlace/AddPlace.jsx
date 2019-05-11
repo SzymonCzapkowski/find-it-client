@@ -1,10 +1,12 @@
 import React from 'react';
 import Modal from 'react-modal';
+import { withFormik, Field } from 'formik';
+import { Button } from 'react-bootstrap';
 
 
 Modal.setAppElement('#root')
 
-class AddPlace extends React.Component {
+class AddPlaceClass extends React.Component {
         constructor() {
             super();
 
@@ -13,7 +15,6 @@ class AddPlace extends React.Component {
             };
 
             this.openModal = this.openModal.bind(this);
-            this.afterOpenModal = this.afterOpenModal.bind(this);
             this.closeModal = this.closeModal.bind(this);
         }
 
@@ -24,11 +25,7 @@ class AddPlace extends React.Component {
             });
         }
 
-        afterOpenModal() {
-            this.subtitle.style.color = '#f00';
-        }
-
-        closeModal() {
+          closeModal() {
             this.setState({
                 modalIsOpen: false
             });
@@ -39,18 +36,53 @@ class AddPlace extends React.Component {
       <div>
         <Modal
           isOpen={this.state.modalIsOpen}
-          onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
           contentLabel= "Modal"
         >
 
+          <div>
+              <form>
+                <div>
+                  <label> Place </label>
+                  <input name = "place" type = "text" />
+                </div>
+                <div>
+                     <label> Skills </label> 
+                    <Field
+                        name = "skills"
+                        component = "textarea"
+                        rows = "5" />
+                </div>
+              </form>
+          </div>
+          <Button onClick={this.closeModal}>Add Project</Button>
           
-          <button onClick={this.closeModal}>Add Project</button>
-          <div>I am a modal</div>
+          <Button onClick={this.closeModal}> x </Button>
         </Modal>
       </div>
     );
   }
 }
-    
-export default AddPlace;
+
+
+const AddPlace = (props) => {
+    const {
+        values,
+        touched,
+        errors,
+        dirty,
+        isSubmitting,
+        handleChange,
+        setFieldValue,
+        handleBlur,
+        handleSubmit,
+        handleReset,
+    } = props;
+}
+export default withFormik({
+    mapPropsToValues: () => ({
+        title: ''
+
+    }),
+
+})(AddPlaceClass);

@@ -6,6 +6,8 @@ import TopNav from './Layout/TopNav/TopNav';
 import MainPage from './MainPage/MainPage';
 import ProfileView from './Profile/ProfileView/ProfileView';
 
+import Places from './Project/ProjectForm/Places/Places'; //to trzeba dać w projectFormMain!
+
 function App() {
   return (
     <>
@@ -18,6 +20,13 @@ function App() {
               <Route path="/profile/:id" component={ProfileView} />
           </Switch>
       </Router>
+        <br></br>
+        <br></br>
+
+        <Places />
+        
+        <br></br>
+        <br></br>
       <Footer />
     </>
   );

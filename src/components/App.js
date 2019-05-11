@@ -6,6 +6,7 @@ import TopNav from './Layout/TopNav/TopNav';
 import MainPage from './MainPage/MainPage';
 import ProfileView from './Profile/ProfileView/ProfileView';
 
+
 function App() {
   return (
     <>

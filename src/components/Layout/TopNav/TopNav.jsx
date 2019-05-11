@@ -21,8 +21,11 @@ const TopNav = () => {
     return (
         <TopNavContainer>
             {windowWidth <= 500 ? (
+                <>
+                <div className="hamburgerBar"></div>
                 <HamburgerButton onClick={() => handleClick()} isMenuDisplayed={isMenuDisplayed}/>
-            ) : null}
+                </>) : null}
+            
             {isMenuDisplayed || windowWidth > 500 ? (
                 <ul>
                     <li>Kategoria 1</li>

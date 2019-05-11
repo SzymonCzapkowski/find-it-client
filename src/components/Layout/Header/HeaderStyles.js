@@ -35,7 +35,7 @@ export const Button = styled.button`
     border-radius: 10px;
     border:none;
     margin: 0 40px 0 0;
-    background: ${props => props.color ? "#434343" : "#3758CE"};
+    background: ${props => props.changeColor ? "#434343" : "#3758CE"};
 
     @media (max-width:500px) {
     margin: 0 2vh 0; 

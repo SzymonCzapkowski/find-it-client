@@ -20,7 +20,7 @@ class AddPlaceClass extends React.Component {
               <form>
                 <div>
                   <label> Place </label>
-                  <input name = "place" type = "text" />
+                  <Field name = "place" type = "text" />
                 </div>
                 <div>
                      <label> Skills </label> 
@@ -31,7 +31,7 @@ class AddPlaceClass extends React.Component {
                 </div>
               </form>
           </div>
-          <Button onClick={this.props.closeModal}>Add Project</Button>
+          <Button onClick={() => this.props.addPlace({place: this.props.values.place, skills: this.props.values.skills})}>Add Project</Button>
           
           <Button onClick={this.props.closeModal}> x </Button>
         </Modal>

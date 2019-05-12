@@ -11,9 +11,16 @@ class ProjectFormMainClass extends React.Component {
         isModalOpen: false,
     }
 
-    closeModal = () => {
+    closeModal = () => { 
         this.setState({isModalOpen: false})
     }
+
+    addPlace = (place) => {
+        this.setState({isModalOpen: false})
+        this.listElements.push(place)
+    }
+    
+    listElements = [{place: "tester", skills: "manual testing"}, {place: "programmer", skills: "java script"}];
 
 render() {
     return (
@@ -47,12 +54,12 @@ render() {
         </div>
        <div>
        {this.state.isModalOpen ? 
-            <AddPlaceClass closeModal={this.closeModal}/> 
+            <AddPlaceClass closeModal={this.closeModal} addPlace={this.addPlace}/>
             : null
         }
             <Button onClick={() => this.setState({isModalOpen: true})}>+</Button>
        </div>
-            <Places/>
+            <Places places={this.listElements}/>
         </form>   
     );
 }

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { TopNavContainer } from "./TopNavStyles";
-import { HamburgerButton } from "./TopNavStyles";
+import React, { useState, useEffect } from "react"
+import { TopNavContainer } from "./TopNavStyles"
+import { HamburgerButton } from "./TopNavStyles"
 
 const TopNav = () => {
     const [isMenuDisplayed, setMenuDisplayed] = useState(false);
@@ -20,8 +20,9 @@ const TopNav = () => {
 
     return (
         <TopNavContainer>
+        <div className="bar">
             {windowWidth <= 500 ? (
-                <>
+                <>                
                 <div className="hamburgerBar"></div>
                 <HamburgerButton onClick={() => handleClick()} isMenuDisplayed={isMenuDisplayed}/>
                 </>) : null}
@@ -35,6 +36,8 @@ const TopNav = () => {
                     <li>Kategoria 5</li>
                 </ul>
             ) : null}
+        </div> 
+        <p>Make your IT project done</p>
         </TopNavContainer>
     );
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {FindContent} from './FindStyles'
 import {TeamMate} from './FindStyles'
 import {Project} from './FindStyles'

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 import bgBlue from '../../../images/bg_blue.jpg'
 import bgBlack from '../../../images/bg_black.jpg'
 
@@ -8,7 +8,7 @@ export const FindContent = styled.div`
     grid-template-columns: 1fr 1fr;
 
      p {
-        font-size: 5vh;
+        font-size: 3vw;
         justify-items: end;
     }
 `

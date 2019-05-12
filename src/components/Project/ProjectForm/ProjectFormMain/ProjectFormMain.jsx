@@ -39,8 +39,9 @@ render() {
                 <ProjectName>
                     <ProjectNameLabel > Project Name </ProjectNameLabel>
                     <ProjectNameInput style = {{
-                        "border-radius": "6%",
-                        "width": "60%"
+                        "border-radius": "15px",
+                        "width": "60%",
+                        "border": "0"
                     }}
                     name = "projectname" type = "text"/> 
                 </ProjectName>
@@ -53,8 +54,9 @@ render() {
 
                     <Field style = {
                         {
-                            "border-radius": "6%",
-                            "width": "60%"                 
+                            "border-radius": "15px",
+                            "width": "60%",
+                            "border": "0"
                         }
                     }
                     name = "messageText"

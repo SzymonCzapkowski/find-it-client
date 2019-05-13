@@ -5,6 +5,7 @@ import Header from './Layout/Header/Header';
 import TopNav from './Layout/TopNav/TopNav';
 import MainPage from './MainPage/MainPage';
 import ProfileView from './Profile/ProfileView/ProfileView';
+import ProjectView from './Project/ProjectView/ProjectView';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Switch>
               <Route exact path="/" component={MainPage} />
               <Route exact path="/profile" component={ProfileView} />
+              <Route exact path="/project" component={ProjectView} />
               <Route path="/profile/:id" component={ProfileView} />
           </Switch>
       </Router>

@@ -38,11 +38,7 @@ render() {
             <FormContainer>
                 <ProjectName>
                     <ProjectNameLabel > Project Name </ProjectNameLabel>
-                    <ProjectNameInput style = {{
-                        "border-radius": "15px",
-                        "width": "60%",
-                        "border": "0"
-                    }}
+                    <ProjectNameInput className = "projectnameinput" 
                     name = "projectname" type = "text"/> 
                 </ProjectName>
 
@@ -52,13 +48,7 @@ render() {
                         Description 
                     </DescriptionLabel>
 
-                    <Field style = {
-                        {
-                            "border-radius": "15px",
-                            "width": "60%",
-                            "border": "0"
-                        }
-                    }
+                    <Field className = "description"      
                     name = "messageText"
                     component = "textarea"
                     rows = "6" />
@@ -66,14 +56,7 @@ render() {
                 <Section>
                     <Category>  
                         <CategoryLabel> Category </CategoryLabel>
-                        <Field style = {
-                            {
-                                "display": "inline-block",
-                                "margin-top": "1%",
-                                "font-size": "18px"
-                            }
-                        }
-                
+                        <Field className = "category"
                         name = "category"
                         component = "select"
                         placeholder = "Category">
@@ -92,19 +75,7 @@ render() {
                                 <AddPlaceClass closeModal={this.closeModal} addPlace={this.addPlace}/>
                                 : null
                             }
-                                <Button style = {{
-                                        "background-color": "rgba(55, 88, 206, 0.8)",
-                                        "font-size": "30px",
-                                        "width": "100%",
-                                        "border-radius": "30%",
-                                        "border-style": "none"
-
-                                }}
-                                
-                                
-                                
-                                onClick={() => this.setState({isModalOpen: true})}>+</Button>
-                        
+                                <Button className = "button" onClick={() => this.setState({isModalOpen: true})}>+</Button>
                     </PlusButton>
                     <PlacesContainer>
                     <Places

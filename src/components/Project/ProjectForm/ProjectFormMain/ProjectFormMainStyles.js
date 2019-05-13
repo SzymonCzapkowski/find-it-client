@@ -54,11 +54,21 @@ width: 20%;
 
 export const ProjectNameInput = styled.input `
 width: 30%;
+.projectnameinput{
+border-radius: 15px;
+width: 60%;
+border: 0;
+}
 `
 
 export const Description = styled.div `
 display:block;
 margin-top: 3%;
+.description {
+border-radius: 15px;
+width:60%;
+border:0;
+}
 `
 
 export const DescriptionLabel = styled.label `
@@ -70,6 +80,11 @@ export const Category = styled.div `
 border-radius: 10 px;
 display: inline-block;
 margin-top: 3%;
+.category {
+    display: inline-block;
+    margin-top: 1%;
+    font-size: 18px
+}
 `
 
 export const CategoryLabel = styled.label`
@@ -85,6 +100,13 @@ display: inline-block;
 text-align: center;
 height: 38px;
 width: 38px;
+.button{
+    background-color: rgba(55, 88, 206, 0.8);
+    font-size: 30px;
+    width:100%;
+    border-radius:30%;
+    border-style:none;
+}
 `
 export const PlacesContainer = styled.div `
 display: inline-block;

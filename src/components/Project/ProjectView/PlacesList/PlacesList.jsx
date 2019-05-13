@@ -2,26 +2,69 @@ import React from 'react';
 import { ViewPlacesContainer } from './PlacesListStyles';
 import { PlacesTitle } from './PlacesListStyles';
 import { PlacesContainer } from './PlacesListStyles';
+import axios from 'axios';
 
 import PlacesListElement from './PlacesListElement/PlacesListElement';
 
 const PlacesList = () => {
     
-    fetch('http://localhost:3000/api/places/5cd87d700c39a2432c1e6264').then(resp => {
-        console.log(resp);
-    });
-    
-    const places = [true,true,true,true,false,true,false,false]; //wstępnie, ostatecznie pobranie z api
+    const url = 'http://localhost:3001/api/projects/';
 
-    const skills = ['HTMl', 'CSS', 'JS']; //wstępnie, ostatecznie pobranie z api
+    const currentProjectId = '5cd85cba6947af0f3c967d98';
+    const projectPlaces = [
+        {   
+            _id: '1',
+            name: 'Js dev1',
+            requiredSkills: ['JS1', 'CSS1'],
+            status: false
+        },
+        {   
+            _id: '2',
+            name: 'Js dev2',
+            requiredSkills: ['JS2', 'CSS2'],
+            status: true
+        },
+        {   
+            _id: '3',
+            name: 'Js dev3',
+            requiredSkills: ['JS3', 'CSS3'],
+            status: false
+        },
+        {   
+            _id: '4',
+            name: 'Js dev4',
+            requiredSkills: ['JS4', 'CSS4'],
+            status: false
+        }
+    ];
 
+    function getProjectPlaces(){
+        axios({
+            method: 'get',
+            url: `${url}`,
+            body: {
+                _id: '5cd85c766947af0f3c967d97' 
+            }
+        })
+        .then(function (resp) {
+            resp.data.map( item => {
+                if(item._id === currentProjectId){
+                    projectPlaces.push(item.places);
+                };
+            });
+        });
+    };
+
+    getProjectPlaces();
+
+
+    // dodać usera do propsów placesListElement!
     return (
         <ViewPlacesContainer>
             <PlacesTitle>Places:</PlacesTitle>
             <PlacesContainer>
-                {places.map(item => {
-                    const key = Math.random(); // potem zmienić na id plejsa
-                    return <PlacesListElement key={key} skills={skills} name='JS Developer' status={item}/>
+                {projectPlaces.map(item => {
+                    return <PlacesListElement key={item._id} skills={item.requiredSkills} name={item.name} status={item.status}/>
                 })}
             </PlacesContainer>
         </ViewPlacesContainer>

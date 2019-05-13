@@ -1,5 +1,6 @@
 import React from 'react';
 import { PlaceElement } from './PlacesListElementsStyles';
+//import axios from 'axios';
 
 class PlacesListElement extends React.Component {
 
@@ -10,38 +11,51 @@ class PlacesListElement extends React.Component {
             status: this.props.status
          };
         this.showDetails = this.showDetails.bind(this);
-        this.hideDetails = this.showDetails.bind(this);
-        this.takePlace = this.takePlace.bind(this);
+        this.hideDetails = this.hideDetails.bind(this);
+        this.takeOrLeavePlace = this.takeOrLeavePlace.bind(this);
     };
     
     showDetails() {
-        if(!this.state.status){
+        if(!this.state.isDetailsDisplayed){
             this.setState({ isDetailsDisplayed: true });
         }
     };
 
-    /*łączenie z api i pobranie skillsów*/
-
     hideDetails(){
-        console.log('closeklik');
-        this.setState({isDetailsDisplayed: false})
+        this.setState({ isDetailsDisplayed: false })
     };
 
-    takePlace(){
-        console.log('takeklik');
+    takeOrLeavePlace(){
+        if(!this.status){
+            /*
+            const UserId = '5cd85938fff6c12f409c3886';  //potem zmienić na właściwy z propsów
 
-        /*const url = `/`;
-        axios.put(url, { status: true });*/
+            let url = `http://localhost:3001/api/places/attach/${UserId}`;
+            axios.patch(url, { UserId: `${UserId}` })
+            .catch(error => console.log(error));
+            */
+            this.setState({ 
+                status: true, 
+                isDetailsDisplayed: false
+            })
+        } else {
+            /*
+            const UserId = '5cd85938fff6c12f409c3886';  //potem zmienić na właściwy z propsów
+            let url = `http://localhost:3001/api/places/detach/${UserId}`;
+            axios.patch(url, { UserId: `${UserId}` })
+            .catch(error => console.log(error));
+            */
 
-        this.setState({ 
-            status: true, 
-            isDetailsDisplayed: false
-        })
+            this.setState({ 
+                status: false, 
+                isDetailsDisplayed: false
+            })
+        }
     };
 
     render() {
         return (
-            <PlaceElement status={true} onClick={this.showDetails}>
+            <PlaceElement status={this.state.status} onClick={this.showDetails}>
 
                 {this.state.isDetailsDisplayed ? (
                     <div className="container">
@@ -55,7 +69,7 @@ class PlacesListElement extends React.Component {
                                 })}
                             </ul>
                         </div>
-                        <div className="takeBtn" onClick={this.takePlace}><p>Take it</p></div>
+                        <div className="takeBtn" onClick={this.takeOrLeavePlace}>{this.state.status ? <p>Taken</p> : <p>Take it</p>}</div>
                     </div>
                 ) : null}
             </PlaceElement>

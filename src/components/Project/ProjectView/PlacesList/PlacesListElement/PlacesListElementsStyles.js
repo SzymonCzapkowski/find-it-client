@@ -76,7 +76,7 @@ export const PlaceElement = styled.div`
         margin: 35px auto;
         width: 119px;
         height: 32px;
-        background: #3758CE;
+        background: ${props => props.status ? "#434343" : "rgba(55, 88, 206, 0.8)"};
         border-radius: 10px;
         font-family: Ubuntu;
         font-size: 18px;

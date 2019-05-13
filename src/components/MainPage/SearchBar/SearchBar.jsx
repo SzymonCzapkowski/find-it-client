@@ -12,7 +12,11 @@ const SearchBar = () => {
                 <SearchForm placeholder="find a project">
                 </SearchForm>
                 <SearchSelect>
-                    <option>Category</option>
+                    <option>Front-end</option>
+                    <option>Node.js</option>
+                    <option>.NET</option>
+                    <option>Python</option>
+                    <option>Java</option>
                 </SearchSelect>
                 <SearchButton>
                     Search

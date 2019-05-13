@@ -29,11 +29,11 @@ const TopNav = () => {
             
             {isMenuDisplayed || windowWidth > 500 ? (
                 <ul>
-                    <li>Kategoria 1</li>
-                    <li>Kategoria 2</li>
-                    <li>Kategoria 3</li>
-                    <li>Kategoria 4</li>
-                    <li>Kategoria 5</li>
+                    <li>Front-end</li>
+                    <li>Node.js</li>
+                    <li>.NET</li>
+                    <li>Python</li>
+                    <li>Java</li>
                 </ul>
             ) : null}
         </div> 

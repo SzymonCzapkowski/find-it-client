@@ -34,7 +34,6 @@ export const PopularProjectsBoxes = styled.div`
 
 export const PopularProjectsBox = styled.div`
     display:grid;
-    grid-template-rows: 1fr 1fr 1fr;
     justify-items: center;
     text-align: center;
     box-sizing:border-box;

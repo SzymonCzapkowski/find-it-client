@@ -6,6 +6,7 @@ export const HeaderContainer = styled.div`
     display: grid;
     grid-template-columns: 20% 80%;
     align-items: center;
+    background-color:white;
 
     @media (max-width:500px) {
         grid-template-columns: 100%;

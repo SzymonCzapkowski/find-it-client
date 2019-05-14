@@ -28,3 +28,22 @@ export const Place = styled.div `
     border-radius: 10px;
     background: ${props => props.status ? "#434343" : "rgba(55, 88, 206, 0.8)"};
 `
+
+export const PlusButton = styled.div `
+margin-left: 20%;
+display: inline-block;
+text-align: center;
+height: 38px;
+width: 38px;
+display: inline-block
+.button{
+    background-color: rgba(55, 88, 206, 0.8);
+    font-size: 30px;
+    width:100%;
+    border-radius:30%;
+    border-style:none;
+}
+`
+export const Section = styled.div `
+display: inline-block;
+`

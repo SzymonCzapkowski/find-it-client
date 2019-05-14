@@ -13,7 +13,7 @@ const ProfileView = ({ match }) => {
                 {/* <SearchBar /> */}
                 <p>Profil użytkownika</p>
                 <ProfileViewMain userId={match.params.id}/>
-                <ProfileViewSkills />
+                <ProfileViewSkills userId={match.params.id}/>
                 <p>User: {match.params.id || "No user with this ID"}</p>
                 <Link to='/'>Go to mainpage</Link>
             </ProfileViewContainer>

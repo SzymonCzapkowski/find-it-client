@@ -10,10 +10,10 @@ const ProfileView = ({ match }) => {
         return (
             <ProfileViewContainer>
                 <p>Profil użytkownika</p>
-                <ProfileViewMain />
+                <ProfileViewMain userId={match.params.id}/>
                 <ProfileViewSkills />
                 <p>User: {match.params.id || "No user with this ID"}</p>
-                <Link to='/'>Go to main page</Link>
+                <Link to='/'>Go to mainpage</Link>
             </ProfileViewContainer>
         );
 

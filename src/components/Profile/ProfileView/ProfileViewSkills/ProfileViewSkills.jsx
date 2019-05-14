@@ -3,16 +3,17 @@ import { Skills } from './ProfileViewSkillsStyles';
 import { SkillsList } from './ProfileViewSkillsStyles';
 import axios from 'axios';
 
+
 class ProfileViewSkills extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
-            skills: ['html', 'css', 'js'] 
+            skills: [] 
         }
     }
 
     componentDidMount() {
-        axios.get('http://localhost:3000/api/users/:id')
+        axios.get(`http://localhost:3000/api/users/${this.props.userId}/`)
             .then(response => {
                this.setState({ 
                     skills: response.data.skills

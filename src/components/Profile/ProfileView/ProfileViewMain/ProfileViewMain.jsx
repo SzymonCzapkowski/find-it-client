@@ -21,19 +21,19 @@ class ProfileViewMain extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            fullName: 'Kate',
-            email: 'kate@u.com',
-            userName: 'kate123',
-            city: 'London',
-            country: 'UK',
-            github: 'http://www.github.com',
-            linkedin: 'http://www.linkedin.com',
-            website: 'http://www.google.com'
+            fullName: '',
+            email: '',
+            userName: '',
+            city: '',
+            country: '',
+            github: '',
+            linkedin: '',
+            website: ''
         };
     }
 
     componentDidMount() {
-        axios.get('http://localhost:3000/api/users/:id')
+        axios.get(`http://localhost:3000/api/users/${this.props.userId}/`)
             .then(response => {
                 this.setState({ 
                     fullName: response.data.name,

@@ -1,7 +1,5 @@
 import React from 'react';
 import { withFormik, Field } from 'formik';
-import AddPlaceClass from '../AddPlace/AddPlace';
-import { Button } from 'react-bootstrap';
 import Places from '../Places/Places';
 import { Background, ProjectFormMainContainer, PlacesContainer, Section, Headerh1, Headerh3, FormContainer, ProjectName, ProjectNameLabel, ProjectNameInput, Description, DescriptionLabel, Category, CategoryLabel, PlusButton } from './ProjectFormMainStyles';
 
@@ -70,16 +68,12 @@ render() {
                         </Field>
                     </Category>
                     
-                    <PlusButton>
-                        {this.state.isModalOpen ? 
-                                <AddPlaceClass closeModal={this.closeModal} addPlace={this.addPlace}/>
-                                : null
-                            }
-                                <Button className = "button" onClick={() => this.setState({isModalOpen: true})}>+</Button>
-                    </PlusButton>
+
                     <PlacesContainer>
                     <Places
-                    places={this.listElements}/>  
+                    places={this.listElements} 
+                    //closeModal={this.closeModal} addPlace={this.addPlace}
+                    />  
                     </PlacesContainer>
                 </Section>
             </FormContainer>

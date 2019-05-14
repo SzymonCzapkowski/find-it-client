@@ -53,11 +53,14 @@ width: 20%;
 
 
 export const ProjectNameInput = styled.input `
-width: 30%;
+width: 60%;
 .projectnameinput{
 border-radius: 15px;
-width: 60%;
-border: 0;
+width:60%;
+border:0;
+ box-shadow: inset 0 1px rgba(34, 25, 25, 0.2),
+        0 1px rgba(255, 255, 255, 0.6),
+        0 0 7px rgba(197, 187, 187, 0.5);
 }
 `
 
@@ -68,6 +71,9 @@ margin-top: 3%;
 border-radius: 15px;
 width:60%;
 border:0;
+box-shadow: inset 0 1px rgba(34, 25, 25, 0.2),
+        0 1px rgba(255, 255, 255, 0.6),
+        0 0 7px rgba(197, 187, 187, 0.5);
 }
 `
 
@@ -94,20 +100,6 @@ margin-bottom: 15%;
 `
 
 
-export const PlusButton = styled.div `
-margin-left: 20%;
-display: inline-block;
-text-align: center;
-height: 38px;
-width: 38px;
-.button{
-    background-color: rgba(55, 88, 206, 0.8);
-    font-size: 30px;
-    width:100%;
-    border-radius:30%;
-    border-style:none;
-}
-`
 export const PlacesContainer = styled.div `
 display: inline-block;
 margin-left: 5%;

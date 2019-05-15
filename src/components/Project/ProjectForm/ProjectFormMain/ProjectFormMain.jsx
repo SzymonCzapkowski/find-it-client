@@ -1,25 +1,28 @@
 import React from 'react';
 import { withFormik, Field } from 'formik';
 import Places from '../Places/Places';
-import { Background, ProjectFormMainContainer, PlacesContainer, Section, Headerh1, Headerh3, FormContainer, ProjectName, ProjectNameLabel, ProjectNameInput, Description, DescriptionLabel, Category, CategoryLabel, PlusButton } from './ProjectFormMainStyles';
+import { Background, ProjectFormMainContainer, PlacesContainer, Section, Headerh1, Headerh3, FormContainer, ProjectName, ProjectNameLabel, Description, DescriptionLabel, Category, CategoryLabel, AddProjectButton } from './ProjectFormMainStyles';
+import { Button } from 'react-bootstrap';
+const axios = require('axios');
+
 
 
 class ProjectFormMainClass extends React.Component {
 
-    state = {
-        isModalOpen: false,
+    addProject = () => {
+        axios({
+        url: 'http://localhost:3001/api/projects/',
+        method: 'post',
+        data: {
+            name: this.props.values.projectname,
+            description: this.props.values.messageText,
+            category: this.props.values.category,
+            "places": this.listElements
+        }
+        })
     }
 
-    closeModal = () => { 
-        this.setState({isModalOpen: false})
-    }
-
-    addPlace = (place) => {
-        this.setState({isModalOpen: false})
-        this.listElements.push(place)
-    }
-    
-    listElements = [{place: "tester", skills: "manual testing"}, {place: "programmer", skills: "java script"}];
+    listElements = [];
 
 render() {
     return (
@@ -36,7 +39,7 @@ render() {
             <FormContainer>
                 <ProjectName>
                     <ProjectNameLabel > Project Name </ProjectNameLabel>
-                    <ProjectNameInput className = "projectnameinput" 
+                    <Field className = "projectnameinput" 
                     name = "projectname" type = "text"/> 
                 </ProjectName>
 
@@ -58,13 +61,12 @@ render() {
                         name = "category"
                         component = "select"
                         placeholder = "Category">
-                            <option value = "javascript"> Java Script </option> 
-                            <option value = "python" > Python </option> 
-                            <option value = "java" > Java </option>
-                            <option value = "PHP" > PHP </option>
-                            <option value = "C#"> C# </option>
-                            <option value = "C++"> C++ </option>
-                            <option value = "Ruby"> Ruby </option>
+                            <option value = ""> Select category </option> 
+                            <option value = "JavaScript"> Java Script </option> 
+                            <option value = "Java" > Java </option>
+                            <option value = "HTML"> HTML </option>
+                            <option value = "CSS"> CSS </option>
+                            <option value = "REACT"> REACT </option>
                         </Field>
                     </Category>
                     
@@ -72,10 +74,12 @@ render() {
                     <PlacesContainer>
                     <Places
                     places={this.listElements} 
-                    //closeModal={this.closeModal} addPlace={this.addPlace}
                     />  
                     </PlacesContainer>
                 </Section>
+                <AddProjectButton>
+                <Button className = "addprojectbutton" onClick={this.addProject}> Add Project </Button>
+                </AddProjectButton>
             </FormContainer>
         </ProjectFormMainContainer>
         </Background>

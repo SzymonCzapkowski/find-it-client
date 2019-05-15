@@ -15,9 +15,9 @@ export const Placeinput = styled.div `
     border-radius: 5px;
     width: 75vh;
     margin-top: 2%;  
-    box-shadow: inset 0 1 px rgba(34, 25, 25, 0.2),
-    0 1 px rgba(255, 255, 255, 0.6),
-    0 0 7 px rgba(197, 187, 187, 0.5);
+    box-shadow: inset 0 1px rgba(34, 25, 25, 0.2),
+    0 1px rgba(255, 255, 255, 0.6),
+    0 0 7px rgba(197, 187, 187, 0.5);
 }
 `
 export const Skillslabel = styled.label`

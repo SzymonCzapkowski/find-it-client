@@ -38,7 +38,6 @@ class Places extends React.Component {
                 <PlacesTitle>Places:</PlacesTitle>
                 <PlacesContainer>
                 {this.props.places.map((place, i) => {
-                        console.log(place)
                         return (<Place className = "placeButton" key= {i} status = {false} > </Place>)
                 })}
                 </PlacesContainer>
@@ -48,13 +47,5 @@ class Places extends React.Component {
 
 }
 }
-
-// usunąć className i dodać onclick
-
-/*
-const placeButton = document.querySelectorAll('.placeButton');
-*/
-
-
 
 export default Places;

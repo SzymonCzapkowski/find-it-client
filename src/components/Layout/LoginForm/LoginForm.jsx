@@ -35,40 +35,21 @@ const LoginForm = ({ values }) => {
 
 
 export default withFormik({
-    mapPropsToValues() {
-        return {
-            email: "",
-            password: ""
-        };
-    },
+  mapPropsToValues() {
+    return {
+      email: "",
+      password: ""
+    };
+  },
   handleSubmit(values) {
     console.log(values);
     axios.post(`http://localhost:3001/api/auth/login`, values)
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
+
 })(LoginForm);
-
-//</button>const rootElement = document.getElementById("root");
-//</label>ReactDOM.render( < FormikApp / > , rootElement);
-/*
-const LoginForm = () => {
-
-    return (
-        <LoginContainer>
-            <p>Login To Your Account</p>
-          <EmailForm>
-            <p>Email:</p>
-          </EmailForm>
-          <PasswordForm>
-            <p>Password:</p>
-            <p>Forgot your password? Click Here!</p>
-          </PasswordForm>
-          <LoginButton>
-            Login
-          </LoginButton>
-            <p>New to Find IT? Register Now</p>
-        </LoginContainer>
-
-    );
-};
-*/
-//export default LoginForm;

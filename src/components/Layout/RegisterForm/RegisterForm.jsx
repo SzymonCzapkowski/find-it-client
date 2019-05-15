@@ -7,7 +7,6 @@ import { PasswordForm } from './RegisterFormStyles'
 import { RegisterButton } from './RegisterFormStyles'
 import {withFormik,Field} from "formik"
 import axios from "axios"
-import { Redirect } from "react-router" 
 
 
 
@@ -52,24 +51,12 @@ export default withFormik({
     },
     handleSubmit(values) {
         console.log(values);
-        axios.post(`http://localhost:3001/api/users/register`, values).then(resault =>{ return <Redirect to="/login"/>})
-        
+        axios.post(`http://localhost:3001/api/users/register`, values)
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     }
-})(RegisterForm); 
-
-//</button>const rootElement = document.getElementById("root");
-//</label>ReactDOM.render( < FormikApp / > , rootElement);
-
-//</label></label>const RegisterForm = () => {
-
-// return ( <
-//      RegisterContainer >
-//   <
-//    NameForm >
-//     <
-//     /NameForm> < /
-//     RegisterContainer >
-// );
-//};
-
-//export default RegisterForm;
+})(RegisterForm)

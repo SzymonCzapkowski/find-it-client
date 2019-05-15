@@ -3,7 +3,40 @@ import { LoginContainer } from './LoginFormStyles'
 import { EmailForm } from './LoginFormStyles'
 import { PasswordForm } from './LoginFormStyles'
 import { LoginButton } from './LoginFormStyles'
+import { withFormik, Form, Field } from "formik";
 
+
+
+const LoginForm = ({ values, handleChange }) => ( <
+    Form >
+    <
+    Field type = "email"
+    name = "email"
+    placeholder = "email" / >
+    <
+    Field type = "password"
+    name = "password"
+    placeholder = "password" / >
+    <
+    button type = "submit" > Login < /button>     <
+    /Form>
+);
+
+const FormikApp = withFormik({
+    mapPropsToValues({ email, password }) {
+        return {
+            email: "email" || "",
+            password: "password" || ""
+        };
+    },
+    handleSubmit(values) {
+        console.log(values);
+    }
+})(LoginForm);
+
+const rootElement = document.getElementById("root");
+ReactDOM.render( < FormikApp / > , rootElement);
+/*
 const LoginForm = () => {
 
     return (
@@ -24,5 +57,5 @@ const LoginForm = () => {
 
     );
 };
-
+*/
 export default LoginForm;

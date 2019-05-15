@@ -1,30 +1,44 @@
 import React from 'react'
 import { RegisterContainer } from './RegisterFormStyles'
 import { NameForm } from './RegisterFormStyles'
-import {
-    withFormik,
-    Form,
-    Field
-} from "formik";
-//import Yup from "yup";
+import { UsernameForm } from './RegisterFormStyles'
+import { EmailForm } from './RegisterFormStyles'
+import { PasswordForm } from './RegisterFormStyles'
+import { RegisterButton } from './RegisterFormStyles'
+import {withFormik,Field} from "formik"
+import axios from "axios"
+import { Redirect } from "react-router" 
+
 
 
 const RegisterForm = ({values}) => ( 
-    <Form >
-    <label>Your name:
-    <Field type = "name" name = "name" placeholder = "name" />
-    </label> 
-    <label>Your username:
-    <Field type = "username" name = "username" placeholder = "username" />
-    </label> 
-    <label>Your email:
-    <Field type = "email" name = "email" placeholder = "email" />
-    </label> 
-    <label>Password:
-    <Field type = "password" name = "password" placeholder = "password" />
-    </label>
-    <button type = "submit"> Register </button> 
-    </Form>
+    <RegisterContainer >
+        <NameForm>
+            <p>Your name:</p>
+            <label>
+            <Field type = "name" name = "name" placeholder = "" />
+            </label>
+        </NameForm>
+        <UsernameForm>
+            <p>Your username:</p>
+            <label>
+            <Field type = "username" name = "username" placeholder = "" />
+            </label>
+        </UsernameForm>
+        <EmailForm>
+            <p>Your email:</p> 
+            <label>
+            <Field type = "email" name = "email" placeholder = "" />
+            </label> 
+        </EmailForm>
+        <PasswordForm>
+            <p>Password:</p>
+            <label>
+            <Field type = "password" name = "password" placeholder = "" />
+            </label>
+        </PasswordForm>
+        <RegisterButton type = "submit"> Create Account </RegisterButton> 
+    </RegisterContainer>
 );
 
 export default withFormik({
@@ -38,8 +52,10 @@ export default withFormik({
     },
     handleSubmit(values) {
         console.log(values);
+        axios.post(`http://localhost:3001/api/users/register`, values).then(resault =>{ return <Redirect to="/login"/>})
+        
     }
-})(RegisterForm);
+})(RegisterForm); 
 
 //</button>const rootElement = document.getElementById("root");
 //</label>ReactDOM.render( < FormikApp / > , rootElement);

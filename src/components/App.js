@@ -20,6 +20,7 @@ function App() {
           <Switch>
               <Route exact path="/" component={MainPage} />
               <Route exact path="/profile" component={ProfileView} />
+              <Route exact path="/project/:id" component={ProjectView} />
               <Route exact path="/project" component={ProjectView} />
               <Route path="/profile/:id" component={ProfileView} />
               <Route path="/projectform" component={ProjectForm}/>

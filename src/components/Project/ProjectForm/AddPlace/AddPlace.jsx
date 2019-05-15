@@ -12,7 +12,7 @@ const customStyles = {
     top: '30vh',
     left: '30vh',
     right: 'auto',
-    bottom: 'auto',
+    bottom: 'auto'
   }
 };
 
@@ -44,7 +44,7 @@ class AddPlaceClass extends React.Component {
               </form>
               <ButtonContainer>
           <AddProjectButton>
-          <Button className= 'button' onClick={() => this.props.addPlace({place: this.props.values.place, skills: this.props.values.skills})}>Add Project</Button>
+          <Button className= 'button' onClick={() => this.props.addPlace({name: this.props.values.place, requiredSkills: this.props.values.skills})}>Add Project</Button>
           </AddProjectButton>
           <ButtonX>
           <Button className = 'button' onClick={this.props.closeModal}> x </Button>

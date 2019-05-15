@@ -2,40 +2,56 @@ import React from 'react';
 import Modal from 'react-modal';
 import { withFormik, Field } from 'formik';
 import { Button } from 'react-bootstrap';
+import {Container, Placelabel, Placeinput, Skillslabel, Skillsinput, AddProjectButton, ButtonX, ButtonContainer } from './AddPlaceStyles'
 
 
 Modal.setAppElement('#root')
 
+const customStyles = {
+  content: {
+    top: '30vh',
+    left: '30vh',
+    right: 'auto',
+    bottom: 'auto'
+  }
+};
+
 class AddPlaceClass extends React.Component {
-        render() {
+
+  render() {
     return (
-      <div>
-        <Modal
+      <Container>
+        <Modal  style={customStyles}
           isOpen
           onRequestClose={this.closeModal}
           contentLabel= "Modal"
         >
-
-          <div>
               <form>
-                <div>
-                  <label> Place </label>
-                  <Field name = "place" type = "text" />
-                </div>
-                <div>
-                     <label> Skills </label> 
-                    <Field
+                
+                  <Placelabel> Place </Placelabel>
+                  <Placeinput>
+                  <Field className = "placeinput" name = "place" type = "text" />
+                </Placeinput>
+               
+                     <Skillslabel> Skills </Skillslabel> 
+                     <Skillsinput>
+                    <Field className = 'skillsinput'
                         name = "skills"
                         component = "textarea"
                         rows = "5" />
-                </div>
+                    </Skillsinput>
+                
               </form>
-          </div>
-          <Button onClick={() => this.props.addPlace({place: this.props.values.place, skills: this.props.values.skills})}>Add Project</Button>
-          
-          <Button onClick={this.props.closeModal}> x </Button>
+              <ButtonContainer>
+          <AddProjectButton>
+          <Button className= 'button' onClick={() => this.props.addPlace({name: this.props.values.place, requiredSkills: this.props.values.skills})}>Add Project</Button>
+          </AddProjectButton>
+          <ButtonX>
+          <Button className = 'button' onClick={this.props.closeModal}> x </Button>
+          </ButtonX>
+          </ButtonContainer>
         </Modal>
-      </div>
+      </Container>
     );
   }
 }

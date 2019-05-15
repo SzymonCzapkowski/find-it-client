@@ -48,7 +48,7 @@ const RegisterForm = ({
     /label>
 
     <
-    button type = "submit" > Login < /button> < /
+    button type = "submit" > Register < /button> < /
     Form >
 );
 

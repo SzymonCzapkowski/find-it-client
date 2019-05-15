@@ -9,14 +9,13 @@ export const FindContent = styled.div`
 
      p {
         font-size: 3vw;
-        justify-items: end;
     }
 `
 export const TeamMate = styled.div`
     display: grid;
     grid-template-rows: 1fr 1fr;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     text-align:center;
     background:url(${bgBlue});
     background-size: cover;

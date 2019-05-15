@@ -10,7 +10,7 @@ export const NewestProjectsBar = styled.div`
     display: flex;
     position: relative;
     font-size: 30px;
-    width: 90%;
+    width: 85%;
     height: 80%; 
     background: #FFFFFF;
     box-shadow: 0px 4px 5px #C8C8C8;
@@ -30,6 +30,8 @@ export const NewestProjectsBar = styled.div`
 export const NewestProjectsBoxes = styled.div`
     display: flex;
     justify-content: space-around;
+    width:80%;
+    margin:auto auto;
 `
 
 export const NewestProjectsBox = styled.div`
@@ -43,6 +45,7 @@ export const NewestProjectsBox = styled.div`
     background: #FFFFFF;
     border: 1px solid #C8C8C8;
     border-radius: 5px;
+    margin:2px;
    
         .bottomLine{
             border-bottom: 2px solid #C8C8C8;

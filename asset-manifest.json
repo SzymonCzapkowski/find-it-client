@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/find-it-client/static/css/main.795991f2.chunk.css",
+    "main.js": "/find-it-client/static/js/main.2df0bd0b.chunk.js",
+    "main.js.map": "/find-it-client/static/js/main.2df0bd0b.chunk.js.map",
+    "runtime~main.js": "/find-it-client/static/js/runtime~main.89cc97d1.js",
+    "runtime~main.js.map": "/find-it-client/static/js/runtime~main.89cc97d1.js.map",
+    "static/js/2.fc97d843.chunk.js": "/find-it-client/static/js/2.fc97d843.chunk.js",
+    "static/js/2.fc97d843.chunk.js.map": "/find-it-client/static/js/2.fc97d843.chunk.js.map",
+    "index.html": "/find-it-client/index.html",
+    "precache-manifest.b1f8b5194161da18e6364a7cfa080682.js": "/find-it-client/precache-manifest.b1f8b5194161da18e6364a7cfa080682.js",
+    "service-worker.js": "/find-it-client/service-worker.js",
+    "static/css/main.795991f2.chunk.css.map": "/find-it-client/static/css/main.795991f2.chunk.css.map",
+    "static/media/bg_black.jpg": "/find-it-client/static/media/bg_black.8e409c4a.jpg",
+    "static/media/bg_blue.jpg": "/find-it-client/static/media/bg_blue.9c6cd67b.jpg",
+    "static/media/photo.jpg": "/find-it-client/static/media/photo.c59786de.jpg"
+  }
+}

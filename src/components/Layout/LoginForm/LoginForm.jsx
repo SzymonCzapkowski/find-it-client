@@ -7,25 +7,16 @@ import { withFormik, Form, Field } from "formik";
 
 
 
-const LoginForm = ({ values }) => ( <
-    Form >
-    <
-    label > Email:
-    <
-    Field type = "email"
-    name = "email"
-    placeholder = "email" / >
-    <
-    /label> <
-    label > Password:
-    <
-    Field type = "password"
-    name = "password"
-    placeholder = "password" / >
-    <
-    /label> <
-    button type = "submit" > Login < /button>      < /
-    Form >
+const LoginForm = ({ values }) => ( 
+  <Form>
+    <label> Email:
+    <Field type = "email" name = "email" placeholder = "email" />
+    </label>  
+    <label> Password:
+    <Field type = "password" name = "password" placeholder = "password" />
+    </label> 
+    <button type = "submit"> Login </button>      
+    </Form>
 );
 
 export default withFormik({

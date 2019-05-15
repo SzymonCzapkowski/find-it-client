@@ -1,18 +1,19 @@
-import React from 'react';
-import { FooterContainer } from './FooterStyles';
-import { FindItLogo } from './FooterStyles';
-import { GithubLogo } from './FooterStyles';
-import gitLogo from '../../../images/github_logo.png';
-import findItLogo from '../../../images/findit_logo.png';
+import React from 'react'
+import { FooterContainer } from './FooterStyles'
+import { FindItLogo } from './FooterStyles'
+import { GithubLogo } from './FooterStyles'
+import gitLogo from '../../../images/github_logo.png'
+import findItLogo from '../../../images/findit_logo.png'
+import { Link } from 'react-router-dom'
 
 
 const Footer = () => {
 
         return (
             <FooterContainer>
-                <FindItLogo>
+                <Link to='/'><FindItLogo>
                     <img src={findItLogo} alt="logo" />
-                </FindItLogo>
+                </FindItLogo></Link>
                 <GithubLogo>
                     <a href="https://github.com/SzymonCzapkowski" title="Szymon Czapkowski"><img src={gitLogo} alt="logo" /></a>
                     <a href="https://github.com/MagdalenaKania" title="Magdalena Kania"><img src={gitLogo} alt="logo" /></a>

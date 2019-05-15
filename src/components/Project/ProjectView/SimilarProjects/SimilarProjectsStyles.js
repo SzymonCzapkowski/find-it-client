@@ -44,6 +44,7 @@ export const SimilarProjectsBox = styled.div`
     background: #FFFFFF;
     border: 1px solid #C8C8C8;
     border-radius: 5px;
+    margin:2px;
    
         .bottomLine{
             border-bottom: 2px solid #C8C8C8;

@@ -3,21 +3,22 @@ import {FindContent} from './FindStyles'
 import {TeamMate} from './FindStyles'
 import {Project} from './FindStyles'
 import {RegisterButton} from './FindStyles'
+import { Link } from 'react-router-dom'
 
 const Find = () => {
     return (
         <FindContent>
             <TeamMate >
                 <p><b>FIND TEAMMATE</b></p>
-                <RegisterButton>
+                <Link to='/register'><RegisterButton>
                     register
-                </RegisterButton>
+                </RegisterButton></Link>
             </TeamMate>
             <Project>
                 <p><b>FIND PROJECT</b></p>
-                <RegisterButton>
+                <Link to='/register'><RegisterButton>
                     register
-                </RegisterButton>
+                </RegisterButton></Link>
             </Project>
         </FindContent>
     )

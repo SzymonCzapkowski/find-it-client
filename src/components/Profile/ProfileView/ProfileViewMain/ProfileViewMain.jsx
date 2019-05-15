@@ -26,9 +26,9 @@ class ProfileViewMain extends React.Component {
             userName: '',
             city: '',
             country: '',
-            github: '',
-            linkedin: '',
-            website: ''
+            github: 'http://www.github.com',
+            linkedin: 'http://www.linkedin.com',
+            website: 'http://www.google.com'
         };
     }
 

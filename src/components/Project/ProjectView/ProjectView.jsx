@@ -27,7 +27,8 @@ const ProjectView = () => {
             <SimilarProjects />
         </ProjectViewContainer>
 
-    );
+        );
+    }
 
 };
 

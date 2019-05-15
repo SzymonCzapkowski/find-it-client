@@ -14,3 +14,10 @@ export const ProjectOwnerText = styled.div`
     text-align:right;
     margin:30px 0 0 0;
 `
+export const StatusButton = styled.button`
+    width: 100px;
+    height: 30px;
+    background: #3758CE;
+    border-radius: 5px;
+    color: white;
+`

@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import { LoginContainer } from './LoginFormStyles'
 import { EmailForm } from './LoginFormStyles'
 import { PasswordForm } from './LoginFormStyles'
@@ -7,26 +8,32 @@ import { withFormik, Form, Field } from "formik";
 
 
 
-const LoginForm = ({ values, handleChange }) => ( <
+const LoginForm = ({ values }) => ( <
     Form >
+    <
+    label > Email:
     <
     Field type = "email"
     name = "email"
     placeholder = "email" / >
     <
+    /label> <
+    label > Password:
+    <
     Field type = "password"
     name = "password"
     placeholder = "password" / >
     <
-    button type = "submit" > Login < /button>     <
-    /Form>
+    /label> <
+    button type = "submit" > Login < /button>      < /
+    Form >
 );
 
 const FormikApp = withFormik({
     mapPropsToValues({ email, password }) {
         return {
-            email: "email" || "",
-            password: "password" || ""
+            email: email || "",
+            password: password || ""
         };
     },
     handleSubmit(values) {

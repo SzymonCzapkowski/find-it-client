@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const FooterContainer = styled.div`
     display: grid;
     grid-template-columns: 20% 80%;  
+    background-color: white;
 
     @media (max-width:500px) {
         grid-template-columns: 100%;

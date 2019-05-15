@@ -6,6 +6,7 @@ import TopNav from './Layout/TopNav/TopNav';
 import MainPage from './MainPage/MainPage';
 import ProfileView from './Profile/ProfileView/ProfileView';
 import ProjectForm from './Project/ProjectForm/ProjectForm';
+import ProjectView from './Project/ProjectView/ProjectView';
 import { GlobalStyles } from './GlobalStyles'
 
 
@@ -19,6 +20,7 @@ function App() {
           <Switch>
               <Route exact path="/" component={MainPage} />
               <Route exact path="/profile" component={ProfileView} />
+              <Route exact path="/project" component={ProjectView} />
               <Route path="/profile/:id" component={ProfileView} />
               <Route path="/projectform" component={ProjectForm}/>
           </Switch>

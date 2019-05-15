@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { LoginContainer } from './LoginFormStyles'
 import { EmailForm } from './LoginFormStyles'
 import { PasswordForm } from './LoginFormStyles'
@@ -29,20 +28,20 @@ const LoginForm = ({ values }) => ( <
     Form >
 );
 
-const FormikApp = withFormik({
-    mapPropsToValues({ email, password }) {
+export default withFormik({
+    mapPropsToValues() {
         return {
-            email: email || "",
-            password: password || ""
+            email: "",
+            password: ""
         };
     },
     handleSubmit(values) {
-        console.log(values);
+        console.log(values)
     }
 })(LoginForm);
 
-const rootElement = document.getElementById("root");
-ReactDOM.render( < FormikApp / > , rootElement);
+//</button>const rootElement = document.getElementById("root");
+//</label>ReactDOM.render( < FormikApp / > , rootElement);
 /*
 const LoginForm = () => {
 
@@ -65,4 +64,4 @@ const LoginForm = () => {
     );
 };
 */
-export default LoginForm;
+//export default LoginForm;

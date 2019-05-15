@@ -2,7 +2,7 @@
   "name": "find-it-client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://adamoleszko.github.io/find-it-client/",
+  "homepage": "https://adamoleszko.github.io/find-it-client",
   "dependencies": {
     "axios": "^0.18.0",
     "formik": "^1.5.4",

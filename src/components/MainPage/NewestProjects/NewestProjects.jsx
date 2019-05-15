@@ -1,47 +1,43 @@
-import React, {useEffect} from 'react'
+import React  from 'react'
 import { ProjectsContainer } from './NewestProjectsStyles'
 import { NewestProjectsBar} from './NewestProjectsStyles'
 import { NewestProjectsBox} from './NewestProjectsStyles'
 import { NewestProjectsBoxes} from './NewestProjectsStyles'
 import react_logo from '../../../images/react.png'
-// import axios from 'axios'
+import axios from 'axios'
 
-const NewestProjects = () => {
+class NewestProjects extends React.Component {
+    state = {
+        projects: []
+    }
+
+    componentDidMount() {
+        axios.get('http://localhost:3001/api/projects/')
+        .then(res => {
+            const slicedProject = res.data.slice(5,9);
+            this.setState({projects:slicedProject});
+            // console.log(slicedProject)
+        });
+    }
     
-    // useEffect(() => {
-    //     axios.get('');
-    // }, []);
-
-    return(
-        <ProjectsContainer>
-            <NewestProjectsBar>
-                <p> The newest projects </p>
-            </NewestProjectsBar>
-            <NewestProjectsBoxes>
-                <NewestProjectsBox>
+    render () {
+        return(
+            <ProjectsContainer>
+                <NewestProjectsBar>
+                    <p> The newest projects </p>
+                </NewestProjectsBar>
+                <NewestProjectsBoxes>
+                    {this.state.projects.map(data=>
+                    <NewestProjectsBox>
                     <img src={react_logo} alt="logo"></img>
-                    <p className="bottomLine">Lorem ipsum dolor sin amet</p>
-                    <p>user</p>
-                </NewestProjectsBox>
-                <NewestProjectsBox>
-                    <img src={react_logo} alt="logo"></img>
-                    <p>Lorem ipsum dolor sin amet</p>
-                    <p>user</p>
-                </NewestProjectsBox>
-                <NewestProjectsBox>
-                    <img src={react_logo} alt="logo"></img>
-                    <p>Lorem ipsum dolor sin amet</p>
-                    <p>user</p>
-                </NewestProjectsBox>
-                <NewestProjectsBox>
-                    <img src={react_logo} alt="logo"></img>
-                    <p>Lorem ipsum dolor sin amet</p>
-                    <p>user</p>
-                </NewestProjectsBox>
-            </NewestProjectsBoxes>            
-        </ProjectsContainer>
-       
-    );  
-};
+                    <p className="bottomLine">{data.name}</p>
+                    <p>{data.category}</p>
+                    </NewestProjectsBox>)} 
+                </NewestProjectsBoxes>            
+            </ProjectsContainer>
+        
+        );  
+    };
+}
 
 export default NewestProjects;

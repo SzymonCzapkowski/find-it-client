@@ -15,4 +15,10 @@ const PlacesAndCategory = () => {
     );
 }
 
-export default PlacesAndCategory;
+const ProjectView = () => {
+    return(
+        <PlacesAndCategory />
+    )
+};
+
+export default ProjectView;

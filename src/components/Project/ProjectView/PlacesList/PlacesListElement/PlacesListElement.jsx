@@ -1,6 +1,6 @@
 import React from 'react';
 import { PlaceElement } from './PlacesListElementsStyles';
-//import axios from 'axios';
+import axios from 'axios';
 
 class PlacesListElement extends React.Component {
 
@@ -27,25 +27,24 @@ class PlacesListElement extends React.Component {
 
     takeOrLeavePlace(){
         if(!this.status){
-            /*
+
             const UserId = '5cd85938fff6c12f409c3886';  //potem zmienić na właściwy z propsów
 
             let url = `http://localhost:3001/api/places/attach/${UserId}`;
             axios.patch(url, { UserId: `${UserId}` })
             .catch(error => console.log(error));
-            */
+            
             this.setState({ 
                 status: true, 
                 isDetailsDisplayed: false
             })
         } else {
-            /*
+            
             const UserId = '5cd85938fff6c12f409c3886';  //potem zmienić na właściwy z propsów
             let url = `http://localhost:3001/api/places/detach/${UserId}`;
             axios.patch(url, { UserId: `${UserId}` })
             .catch(error => console.log(error));
-            */
-
+        
             this.setState({ 
                 status: false, 
                 isDetailsDisplayed: false
@@ -62,7 +61,7 @@ class PlacesListElement extends React.Component {
                         <div className="closeBtn" onClick={this.hideDetails}><p>x</p></div>
                         <div className="name"><p>{this.props.name}</p></div>
                         <div className="skills">
-                            <p>Skills:</p>
+                            <p>Required skills:</p>
                             <ul>
                                 {this.props.skills.map(item => {
                                     return (<ul key={item}>{item}</ul>);

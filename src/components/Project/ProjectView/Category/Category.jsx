@@ -10,7 +10,7 @@ export const Category = () => {
     const url = 'http://localhost:3001/api/projects/';  
     const currentProjectId = '5cd85cba6947af0f3c967d98';    //pobrać od mateusza dany projekt
 
-
+    
     useEffect(() => {
         const getCategory = async () => {
             const project = await axios({
@@ -29,14 +29,18 @@ export const Category = () => {
         };
         getCategory();
     });
+    
 
     return (
         <div>
             <p>Category:</p>
-            <ProjCategory><p>{category}</p></ProjCategory>
+            <ProjCategory><p>JavaScript</p></ProjCategory>
             <UploadPhotoBtn>
                 <p className="Btntxt">Upload<br></br>photo</p>
             </UploadPhotoBtn>
         </div>
     );
 };
+
+
+// ostatecznie zmienić JavaScript w <p> na {category0}

@@ -65,11 +65,11 @@ export const PlaceElement = styled.div`
     }
 
     .skills p{
-        margin: 10px auto 10px 20px;
+        margin: 10px auto 10px 22px;
         font-family: Ubuntu;
         font-style: normal;
         font-weight: 300;
-        font-size: 18px;
+        font-size: 16px;
         color: #434343;
 
     }

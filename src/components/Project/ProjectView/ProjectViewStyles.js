@@ -5,4 +5,8 @@ export const PlacesAndCategoryContainer= styled.div`
     justify-content: space-evenly;
     background: rgb(220, 220, 220);
     min-height: 300px;
-`;
+`
+
+export const ProjectViewContainer = styled.div`
+    
+`

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const FooterContainer = styled.div`
     display: grid;
     grid-template-columns: 20% 80%;  
+    background-color: white;
 
     @media (max-width:500px) {
         grid-template-columns: 100%;
@@ -22,6 +23,9 @@ export const GithubLogo = styled.div`
     grid-gap: 10px;
     margin-right: 10px;
     justify-self: flex-end;
-    align-items: center;
-    
+    align-items: center;    
+
+     @media (max-width:500px) {
+        justify-self: center;
+    }
 `

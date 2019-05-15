@@ -8,6 +8,9 @@ import MainPage from './MainPage/MainPage';
 import ProfileView from './Profile/ProfileView/ProfileView';
 import ProjectForm from './Project/ProjectForm/ProjectForm';
 import ProjectView from './Project/ProjectView/ProjectView';
+import LoginForm from './Layout/LoginForm/LoginForm';
+import RegisterForm from './Layout/RegisterForm/RegisterForm';
+import { GlobalStyles } from './GlobalStyles';
 
 
 function App() {
@@ -22,6 +25,8 @@ function App() {
               <Route exact path="/profile" component={ProfileView} />
               <Route exact path="/project/:id" component={ProjectView} />
               <Route exact path="/project" component={ProjectView} />
+              <Route exact path="/login" component={LoginForm} />
+              <Route exact path="/register" component={RegisterForm} />
               <Route path="/profile/:id" component={ProfileView} />
               <Route path="/projectform" component={ProjectForm}/>
           </Switch>

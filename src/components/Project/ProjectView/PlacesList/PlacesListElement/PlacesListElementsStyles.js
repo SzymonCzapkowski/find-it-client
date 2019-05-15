@@ -45,16 +45,19 @@ export const PlaceElement = styled.div`
 
     .name{
         width: 100%;
-        height: 50px;
+        height: 60px;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: Roboto;
+        font-family: 'Ubuntu';
         font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 19px;
+        font-weight: bold;
+        font-size: 18px;
         color: #434343;
+    }
+
+    .name p{
+        margin: 0 auto 0 20px;;
     }
 
     .skills{
@@ -62,7 +65,13 @@ export const PlaceElement = styled.div`
     }
 
     .skills p{
-        margin-left: 20px;
+        margin: 10px auto 10px 20px;
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        color: #434343;
+
     }
 
     .skills ul{

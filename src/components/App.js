@@ -1,18 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { GlobalStyles } from './GlobalStyles';
 import Footer from './Layout/Footer/Footer';
-import Header from './Layout/Header/Header';
-import TopNav from './Layout/TopNav/TopNav';
+/*import Header from './Layout/Header/Header';
+import TopNav from './Layout/TopNav/TopNav';*/
 import MainPage from './MainPage/MainPage';
 import ProfileView from './Profile/ProfileView/ProfileView';
-
-import Places from './Project/ProjectForm/Places/Places'; //to trzeba dać w projectFormMain!
+import PlacesAndCategory from './Project/ProjectView/ProjectView';
 
 function App() {
   return (
     <>
-      <Header />
-      <TopNav />
+      <GlobalStyles />
       <Router>
           <Switch>
               <Route exact path="/" component={MainPage} />
@@ -23,7 +22,7 @@ function App() {
         <br></br>
         <br></br>
 
-        <Places />
+        <PlacesAndCategory />
         
         <br></br>
         <br></br>

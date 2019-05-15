@@ -11,17 +11,22 @@ const PlacesList = () => {
     const url = 'http://localhost:3001/api/projects/';
 
     const currentProjectId = '5cd85cba6947af0f3c967d98';
+
+
+
+    // tablica zrobiona do screenów
+    // po skończeniu będzie wypełniania plejsami z bazy
     const projectPlaces = [
         {   
             _id: '1',
-            name: 'Js dev1',
-            requiredSkills: ['JS1', 'CSS1'],
-            status: false
+            name: 'React developer',
+            requiredSkills: ['JavaScript', 'React', 'Node.js'],
+            status: true
         },
         {   
             _id: '2',
-            name: 'Js dev2',
-            requiredSkills: ['JS2', 'CSS2'],
+            name: 'React developer',
+            requiredSkills: ['JavaScript', 'React', 'Node.js'],
             status: true
         },
         {   
@@ -35,8 +40,35 @@ const PlacesList = () => {
             name: 'Js dev4',
             requiredSkills: ['JS4', 'CSS4'],
             status: false
+        },
+        {   
+            _id: '5',
+            name: 'Js dev5',
+            requiredSkills: ['JS4', 'CSS4'],
+            status: false
+        },
+        {   
+            _id: '6',
+            name: 'Js dev6',
+            requiredSkills: ['JS4', 'CSS4'],
+            status: false
+        },
+        {   
+            _id: '7',
+            name: 'Js dev7',
+            requiredSkills: ['JS4', 'CSS4'],
+            status: false
+        },
+        {   
+            _id: '8',
+            name: 'Js dev8',
+            requiredSkills: ['JS4', 'CSS4'],
+            status: false
         }
     ];
+
+
+
 
     function getProjectPlaces(){
         axios({
@@ -55,7 +87,7 @@ const PlacesList = () => {
         });
     };
 
-    getProjectPlaces();
+    //getProjectPlaces();
 
 
     // dodać usera do propsów placesListElement!

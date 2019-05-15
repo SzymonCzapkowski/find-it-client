@@ -24,7 +24,6 @@ function App() {
               <Route exact path="/project" component={ProjectView} />
               <Route exact path="/login" component={LoginForm} />
               <Route exact path="/register" component={RegisterForm} />
-              <Route path="/profile/:id" component={ProfileView} />
           </Switch>
       <Footer />
       </Router>

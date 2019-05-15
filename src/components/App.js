@@ -2,11 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { GlobalStyles } from './GlobalStyles';
 import Footer from './Layout/Footer/Footer';
+import Header from './Layout/Header/Header';
+import TopNav from './Layout/TopNav/TopNav';
 import MainPage from './MainPage/MainPage';
 import ProfileView from './Profile/ProfileView/ProfileView';
 import ProjectForm from './Project/ProjectForm/ProjectForm';
 import ProjectView from './Project/ProjectView/ProjectView';
-import { GlobalStyles } from './GlobalStyles'
 
 
 function App() {

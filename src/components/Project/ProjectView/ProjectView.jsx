@@ -28,8 +28,6 @@ const ProjectView = ({ match }) => {
         </ProjectViewContainer>
 
         );
-    }
-
 };
 
 export default ProjectView;

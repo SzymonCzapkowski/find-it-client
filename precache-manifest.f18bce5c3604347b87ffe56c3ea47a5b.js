@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b1a359ca1aeb93b42f89e4bbfae5f803",
+    "revision": "eb22dec3828124e1ccf7a2f6b21c25d0",
     "url": "/find-it-client/index.html"
   },
   {
-    "revision": "cf8a55fb133aea497c8d",
+    "revision": "34bdc1f4995e962d3476",
     "url": "/find-it-client/static/css/main.462b0bd9.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/find-it-client/static/js/2.fc97d843.chunk.js"
   },
   {
-    "revision": "cf8a55fb133aea497c8d",
-    "url": "/find-it-client/static/js/main.c811ccba.chunk.js"
+    "revision": "34bdc1f4995e962d3476",
+    "url": "/find-it-client/static/js/main.2df0bd0b.chunk.js"
   },
   {
     "revision": "6a0e82ccc7fdb54e4709",

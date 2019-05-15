@@ -10,7 +10,6 @@ import ProjectForm from './Project/ProjectForm/ProjectForm';
 import ProjectView from './Project/ProjectView/ProjectView';
 import LoginForm from './Layout/LoginForm/LoginForm';
 import RegisterForm from './Layout/RegisterForm/RegisterForm';
-import { GlobalStyles } from './GlobalStyles';
 
 
 function App() {

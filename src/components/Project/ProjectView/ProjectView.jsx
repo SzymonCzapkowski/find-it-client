@@ -17,11 +17,11 @@ const PlacesAndCategory = () => {
     );
 };
 
-const ProjectView = () => {
+const ProjectView = ({ match }) => {
 
     return (
         <ProjectViewContainer>
-            <ProjectOwner />
+            <ProjectOwner projectId={match.params.id} />
             <ProjectInfo />
             <PlacesAndCategory />
             <SimilarProjects />

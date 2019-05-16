@@ -11,7 +11,7 @@ class ProjectOwner extends React.Component {
     } 
 
     componentDidMount() {
-        axios.get('http://localhost:3001/api/projects/', {params:{_id:"5cd1926120dfe817a4230ec6"}})
+        axios.get('https://sleepy-sands-37154.herokuapp.com/api/projects/', {params:{_id:"5cd1926120dfe817a4230ec6"}})
         .then(res => {
             const author = 'JohnyBravo';
             const createDate = res.data[0].createDate;

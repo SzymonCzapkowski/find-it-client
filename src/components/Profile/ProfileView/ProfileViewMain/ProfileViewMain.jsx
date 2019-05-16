@@ -33,7 +33,7 @@ class ProfileViewMain extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:3000/api/users/${this.props.userId}/`)
+        axios.get(`https://sleepy-sands-37154.herokuapp.com/api/users/${this.props.userId}/`)
             .then(response => {
                 this.setState({ 
                     fullName: response.data.name,

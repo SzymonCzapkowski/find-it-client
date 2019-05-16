@@ -8,7 +8,7 @@ import PlacesListElement from './PlacesListElement/PlacesListElement';
 
 const PlacesList = () => {
     
-    const url = 'http://localhost:3001/api/projects/';
+    const url = 'https://sleepy-sands-37154.herokuapp.com/api/projects/';
 
     const currentProjectId = '5cd85cba6947af0f3c967d98';
 

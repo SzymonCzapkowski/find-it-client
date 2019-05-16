@@ -12,9 +12,9 @@ class NewestProjects extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:3001/api/projects/')
+        axios.get('https://sleepy-sands-37154.herokuapp.com/api/projects/')
         .then(res => {
-            const slicedProject = res.data.slice(5,9);
+            const slicedProject = res.data.slice(0,3);
             this.setState({projects:slicedProject});
             // console.log(slicedProject)
         });

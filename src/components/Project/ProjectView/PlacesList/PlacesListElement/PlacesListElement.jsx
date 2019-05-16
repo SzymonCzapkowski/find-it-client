@@ -30,7 +30,7 @@ class PlacesListElement extends React.Component {
 
             const UserId = '5cd85938fff6c12f409c3886';  //potem zmienić na właściwy z propsów
 
-            let url = `http://localhost:3001/api/places/attach/${UserId}`;
+            let url = `https://sleepy-sands-37154.herokuapp.com/api/places/attach/${UserId}`;
             axios.patch(url, { UserId: `${UserId}` })
             .catch(error => console.log(error));
             
@@ -41,7 +41,7 @@ class PlacesListElement extends React.Component {
         } else {
             
             const UserId = '5cd85938fff6c12f409c3886';  //potem zmienić na właściwy z propsów
-            let url = `http://localhost:3001/api/places/detach/${UserId}`;
+            let url = `https://sleepy-sands-37154.herokuapp.com/api/places/detach/${UserId}`;
             axios.patch(url, { UserId: `${UserId}` })
             .catch(error => console.log(error));
         

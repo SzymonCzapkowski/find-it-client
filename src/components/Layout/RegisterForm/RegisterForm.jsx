@@ -51,7 +51,7 @@ export default withFormik({
     },
     handleSubmit(values) {
         console.log(values);
-        axios.post(`http://localhost:3001/api/users/register`, values)
+        axios.post(`https://sleepy-sands-37154.herokuapp.com/api/users/register`, values)
             .then(function (response) {
                 console.log(response);
             })

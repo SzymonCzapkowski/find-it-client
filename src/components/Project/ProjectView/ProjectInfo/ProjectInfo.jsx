@@ -11,7 +11,7 @@ class ProjectInfo extends React.Component {
     } 
 
     componentDidMount() {
-        axios.get('http://localhost:3001/api/projects/', {params:{_id:"5cd1926120dfe817a4230ec6"}})
+        axios.get('https://sleepy-sands-37154.herokuapp.com/api/projects/', {params:{_id:"5cd1926120dfe817a4230ec6"}})
         .then(res => {
             const name = res.data[0].name;
             const description = res.data[0].description;

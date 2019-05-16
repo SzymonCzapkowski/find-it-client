@@ -11,7 +11,7 @@ class ProjectFormMainClass extends React.Component {
 
     addProject = () => {
         axios({
-        url: 'http://localhost:3001/api/projects/',
+        url: 'https://sleepy-sands-37154.herokuapp.com/api/projects/',
         method: 'post',
         data: {
             name: this.props.values.projectname,

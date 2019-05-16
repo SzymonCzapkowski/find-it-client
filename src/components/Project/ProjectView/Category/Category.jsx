@@ -7,7 +7,7 @@ export const Category = () => {
 
     const [category, setCategory] = useState('');
 
-    const url = 'http://localhost:3001/api/projects/';  
+    const url = 'https://sleepy-sands-37154.herokuapp.com/api/projects/';  
     const currentProjectId = '5cd85cba6947af0f3c967d98';    //pobrać od mateusza dany projekt
 
     
